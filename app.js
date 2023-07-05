@@ -7,6 +7,11 @@ const path = require('path');
 require('dotenv').config();
 require('ejs');
 
+// Se conecta la Base de Datos
+const { conectarDB } = require('./database');
+
+conectarDB()
+
 const app = express();
 const port = process.env.PORT || 5000
 
@@ -18,7 +23,8 @@ app.use(helmet({
 }));
 app.use(morgan('dev'));
 app.use(express.json());
-
+app.use(express.urlencoded({extended: true}));
+app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -35,6 +41,3 @@ app.use((req, res, next) => {
 
 // Starting the server
 app.listen(port, () => console.log(`Server on http://localhost:${port}`));
-
-
-

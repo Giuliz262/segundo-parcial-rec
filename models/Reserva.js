@@ -1,5 +1,5 @@
 // TODO: Crear modelo de datos de Reserva
-const { DataTypes, sequelize } = require('../reservas.db');
+const { DataTypes, sequelize } = require('../database');
 
 const Reserva = sequelize.define('Reserva', {
     // Model attributes are defined here
@@ -32,6 +32,10 @@ const Reserva = sequelize.define('Reserva', {
     telefono: {
         type: DataTypes.STRING(100),
         allowNull: false
+    },
+    costo: {
+        type: DataTypes.FLOAT,
+        allowNull: false,
     },
     estado: {
         type: DataTypes.BOOLEAN,
