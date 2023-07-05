@@ -24,7 +24,7 @@ formCrearReserva.addEventListener('submit', async (e) => {
         method: 'POST',
         body: JSON.stringify(reserva),
         headers: {
-            'Content-Type': 'application/json' // Cuando se envían datos JSON al servidor
+            'Content-Type': 'application/json' 
         }
     })
 

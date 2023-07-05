@@ -66,6 +66,7 @@ ctrl.crearReserva = async (req, res) => {
         fecha_reserva,
         fecha_vuelo,
         telefono,
+        costo,
     } = req.body; // JSON.stringify(reserva);
 
     try {

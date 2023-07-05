@@ -7,8 +7,8 @@ const {
     renderListaReservas,
     renderFormNuevaReserva,
     renderFormEditarReserva,
-    obtenerReservas, // Obtener todas
-    obtenerReserva, // Obtener un única reserva
+    obtenerReservas,
+    obtenerReserva,
     crearReserva,
     actualizarReserva,
     eliminarReserva
@@ -25,7 +25,7 @@ router.get('/', renderListaReservas)
 router.get('/crear-reserva', renderFormNuevaReserva)
 
 // Formulario para actualizar una reserva
-router.get('/actualizar-reserva/:id', renderFormEditarReserva) // para capturar :id -> req.params.id
+router.get('/actualizar-reserva/:id', renderFormEditarReserva)
 
 // ==========================================
 //         Rutas para CRUD de reservas

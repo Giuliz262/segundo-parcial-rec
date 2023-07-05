@@ -1,9 +1,6 @@
 const formReserva = document.querySelector('#formNuevaReserva');
 const reservaId = formReserva.dataset.id;
 
-// Aleternativa utilizando la captura del pathname
-// const reservaId = window.location.pathname.split('/').pop();
-
 const nombre = document.querySelector('#nombre')
 const apellido = document.querySelector('#apellido')
 const fecha_reserva = document.querySelector('#fechareserva')
